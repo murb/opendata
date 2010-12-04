@@ -1,15 +1,15 @@
 class CreateBouwPlanTable < ActiveRecord::Migration
   def self.up
     create_table :bouwplans, :force => true do |b|
-      b.dossiernummer
-      b.locatieaanduiding
-      b.datum_indiening
-      b.postcode
-      b.wijk
-      b.omschrijving
-      b.status
-      b.datum_status
-      b.tekening
+      b.string :dossiernummer
+      b.string :locatieaanduiding
+      b.date :datum_indiening
+      b.string :postcode
+      b.string :wijk
+      b.text :omschrijving
+      b.string :status
+      b.date :datum_status
+      b.string :tekening
       b.timestamps
     end
   end

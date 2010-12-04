@@ -2,10 +2,20 @@
 
 <table>
   <tr>
+		<th>datum_indiening</th>
+		<th>dossiernummer</th>
+		<th>locatieaanduiding</th>
+		<th>lat long</th>
+	
   </tr>
 
 <% @bouwplans.each do |bouwplan| %>
   <tr>
+		<td><%=bouwplan.datum_indiening%></td>
+		<td><%=bouwplan.dossiernummer%></td>
+		<td><%=bouwplan.locatieaanduiding%></td>
+				<td><%=bouwplan.lat%>,<%=bouwplan.lng%></td>
+
     <td><%= link_to 'Show', bouwplan %></td>
     <td><%= link_to 'Edit', edit_bouwplan_path(bouwplan) %></td>
     <td><%= link_to 'Destroy', bouwplan, :confirm => 'Are you sure?', :method => :delete %></td>

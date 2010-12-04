@@ -1,4 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" ?>
+<bouwplannen>
 <bouwplan>
 <dossiernummer>20081730</dossiernummer>
 <locatieaanduiding>Beckumerstraat 495</locatieaanduiding>
@@ -2936,3 +2937,4 @@
 <datum_status>NULL</datum_status>
 <tekening>https://www.loket.enschede.nl/images/Bouwvergunningen/TSTVLP01.png</tekening>
 </bouwplan>
+</bouwplannen>
