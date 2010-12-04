@@ -6,10 +6,7 @@ class Bouwplan < ActiveRecord::Base
     Nokogiri::XML(File.open('data/bouwplan.xml'))
   end
   
-  
-
   def self.load_xml
-    
     self.xml.css('bouwplan').each do | bouwplan |
       b = Bouwplan.new()
       b.dossiernummer = bouwplan.css('dossiernummer').text
@@ -29,7 +26,7 @@ class Bouwplan < ActiveRecord::Base
   end
   
   def geocode_address!
-    address = "#{postcode} #{locatieaanduiding}"
+    address = "Nederland, #{postcode}, Enschede, #{locatieaanduiding}"
     geo=GeoKit::Geocoders::MultiGeocoder.geocode (address)
     errors.add(:address, "Could not Geocode address") if !geo.success
     self.lat, self.lng = geo.lat,geo.lng if geo.success

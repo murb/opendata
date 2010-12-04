@@ -1,28 +1,9 @@
-<h1>Listing bouwplans</h1>
-
-<table>
-  <tr>
-		<th>datum_indiening</th>
-		<th>dossiernummer</th>
-		<th>locatieaanduiding</th>
-		<th>lat long</th>
-	
-  </tr>
-
-<% @bouwplans.each do |bouwplan| %>
-  <tr>
-		<td><%=bouwplan.datum_indiening%></td>
-		<td><%=bouwplan.dossiernummer%></td>
-		<td><%=bouwplan.locatieaanduiding%></td>
-				<td><%=bouwplan.lat%>,<%=bouwplan.lng%></td>
-
-    <td><%= link_to 'Show', bouwplan %></td>
-    <td><%= link_to 'Edit', edit_bouwplan_path(bouwplan) %></td>
-    <td><%= link_to 'Destroy', bouwplan, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
-<% end %>
-</table>
-
-<br />
+<h1>Bouwplannen in Enschede</h1>
+<html><head><title>Test</title>
+  <%= GMap.header %>
+  <%= @map.to_html %>
+  </head><body>
+  <%= @map.div(:width => '100%', :height => 800) %>
+  </body></html>
 
 <%= link_to 'New bouwplan', new_bouwplan_path %>

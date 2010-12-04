@@ -2,12 +2,36 @@ class BouwplansController < ApplicationController
   # GET /bouwplans
   # GET /bouwplans.xml
   def index
+    
     @bouwplans = Bouwplan.all
-
-    respond_to do |format|
-      format.html # index.html.erb
-      format.xml  { render :xml => @bouwplans }
+    @map = GMap.new("map_div")
+    @map.control_init(:large_map => true,:map_type => true)
+    @map.center_zoom_init([52.2129981,6.8969771],15)
+    
+    @gmarkers = []
+    
+    Bouwplan.all.each do | b |
+            # 
+            #       <td><%=bouwplan.datum_indiening%></td>
+            # <td><%=bouwplan.dossiernummer%></td>
+            # <td><%=bouwplan.locatieaanduiding%></td>
+            #       <td><%=bouwplan.postcode%></td>
+            #       <td><%=bouwplan.wijk%></td>
+            #       <td><%=bouwplan.omschrijving%></td>
+            #       <td><%=bouwplan.status%></td>
+            #       <td><%=bouwplan.datum_status%></td>
+            #       <td><%=bouwplan.tekening%></td>
+      gm = GMarker.new([b.lat, b.lng], :title => "#{b.dossiernummer}", :info_window => "#{b.omschrijving}, <a href=\"#{b.tekening}\">tekening</a>")
+      @map.overlay_init(gm)
+      @gmarkers << gm
     end
+
+    #render :text => @gmarkers.map{|m| m.inspect}
+    
+    respond_to do |format|
+          format.html # index.html.erb
+          format.xml  { render :xml => @bouwplans }
+        end
   end
 
   # GET /bouwplans/1
