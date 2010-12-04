@@ -1,0 +1,18 @@
+<h1>Listing bouwplans</h1>
+
+<table>
+  <tr>
+  </tr>
+
+<% @bouwplans.each do |bouwplan| %>
+  <tr>
+    <td><%= link_to 'Show', bouwplan %></td>
+    <td><%= link_to 'Edit', edit_bouwplan_path(bouwplan) %></td>
+    <td><%= link_to 'Destroy', bouwplan, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New bouwplan', new_bouwplan_path %>
