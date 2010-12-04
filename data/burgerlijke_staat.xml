@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<burgerlijke_staat>
+<code>0</code>
+<naam>Geen huwelijk/geregistreerd partnerschap</naam>
+</burgerlijke_staat>
+<burgerlijke_staat>
+<code>1</code>
+<naam>Gehuwd</naam>
+</burgerlijke_staat>
+<burgerlijke_staat>
+<code>2</code>
+<naam>Geregıstreerde partner</naam>
+</burgerlijke_staat>
+<burgerlijke_staat>
+<code>3</code>
+<naam>Weduw(e)(naar)</naam>
+</burgerlijke_staat>
+<burgerlijke_staat>
+<code>4</code>
+<naam>Achtergebleven geregistreerde partner</naam>
+</burgerlijke_staat>
+<burgerlijke_staat>
+<code>5</code>
+<naam>Gescheıden</naam>
+</burgerlijke_staat>
+<burgerlijke_staat>
+<code>6</code>
+<naam>Gescheiden geregistreerde partner</naam>
+</burgerlijke_staat>
+<burgerlijke_staat>
+<code>7</code>
+<naam>Onbekend</naam>
+</burgerlijke_staat>
+<burgerlijke_staat>
+<code>8</code>
+<naam>Nietig verklaard huwelijk</naam>
+</burgerlijke_staat>
+<burgerlijke_staat>
+<code>9</code>
+<naam>Nietig verklaard partnerschap</naam>
+</burgerlijke_staat>
