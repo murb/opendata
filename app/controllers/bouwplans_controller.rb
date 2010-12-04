@@ -21,7 +21,7 @@ class BouwplansController < ApplicationController
             #       <td><%=bouwplan.status%></td>
             #       <td><%=bouwplan.datum_status%></td>
             #       <td><%=bouwplan.tekening%></td>
-      gm = GMarker.new([b.lat, b.lng], :title => "#{b.dossiernummer}", :info_window => "#{b.omschrijving}, <a href=\"#{b.tekening}\">tekening</a>")
+      gm = GMarker.new([b.lat, b.lng], :title => "#{b.dossiernummer}", :info_window => "<h3>#{b.dossiernummer}</h3><p>#{b.omschrijving} in #{b.wijk} ingediend op #{b.datum_indiening}, <a href=\"#{b.tekening}\">tekening</a></p>")
       @map.overlay_init(gm)
       @gmarkers << gm
     end
