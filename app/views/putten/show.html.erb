@@ -1,0 +1,38 @@
+<p>
+  <b>Titel:</b>
+  <%=h @put.titel %>
+</p>
+
+<p>
+  <b>Omschrijving:</b>
+  <%=h @put.omschrijving %>
+</p>
+
+<p>
+  <b>Geinvesteerd:</b>
+  <%=h @put.geinvesteerd %>
+</p>
+
+<p>
+  <b>Verwachte opbrengst:</b>
+  <%=h @put.verwachte_opbrengst %>
+</p>
+
+<p>
+  <b>Alternatief:</b>
+  <%=h @put.alternatief %>
+</p>
+
+<p>
+  <b>Lat:</b>
+  <%=h @put.lat %>
+</p>
+
+<p>
+  <b>Lng:</b>
+  <%=h @put.lng %>
+</p>
+
+
+<%= link_to 'Edit', edit_put_path(@put) %> |
+<%= link_to 'Back', putten_path %>

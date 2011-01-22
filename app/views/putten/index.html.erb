@@ -1,0 +1,32 @@
+<h1>Listing putten</h1>
+
+<table>
+  <tr>
+    <th>Titel</th>
+    <th>Omschrijving</th>
+    <th>Geinvesteerd</th>
+    <th>Verwachte opbrengst</th>
+    <th>Alternatief</th>
+    <th>Lat</th>
+    <th>Lng</th>
+  </tr>
+
+<% @putten.each do |put| %>
+  <tr>
+    <td><%=h put.titel %></td>
+    <td><%=h put.omschrijving %></td>
+    <td><%=h put.geinvesteerd %></td>
+    <td><%=h put.verwachte_opbrengst %></td>
+    <td><%=h put.alternatief %></td>
+    <td><%=h put.lat %></td>
+    <td><%=h put.lng %></td>
+    <td><%= link_to 'Show', put %></td>
+    <td><%= link_to 'Edit', edit_put_path(put) %></td>
+    <td><%= link_to 'Destroy', put, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New put', new_put_path %>

@@ -1,0 +1,2 @@
+module PuttenHelper
+end

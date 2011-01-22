@@ -1,0 +1,19 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  titel: MyString
+  omschrijving: MyText
+  geinvesteerd: 1
+  verwachte_opbrengst: 1
+  alternatief: MyText
+  lat: 1.5
+  lng: 1.5
+
+two:
+  titel: MyString
+  omschrijving: MyText
+  geinvesteerd: 1
+  verwachte_opbrengst: 1
+  alternatief: MyText
+  lat: 1.5
+  lng: 1.5
