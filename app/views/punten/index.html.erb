@@ -1,5 +1,5 @@
 <% content_for :head do %>
-<%= GMap.header(:host=>@request.host) %>
+<%= GMap.header(:host=>request.host) %>
 <%= @map.to_html %>
 <% end%>
 <div id="header">
