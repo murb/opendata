@@ -3,9 +3,11 @@
 #For development and test, we have only one possible host (localhost:3000), so there is only a single key associated with the mode.
 #In production, the app can be accessed through 2 different hosts: thepochisuperstarmegashow.com and exmaple.com. There then needs a 2-key hash. If you deployed to one host, only the API key would be needed (as in development and test).
 
-development: ABQIAAAAzMUFFnT9uH0xq39J0Y4kbhTJQa0g3IQ9GZqIMmInSLzwtGDKaBR6j135zrztfTGVOm2QlWnkaidDIQ
+development: 
+  localhost: ABQIAAAAzMUFFnT9uH0xq39J0Y4kbhTJQa0g3IQ9GZqIMmInSLzwtGDKaBR6j135zrztfTGVOm2QlWnkaidDIQ
 
 test: ABQIAAAAzMUFFnT9uH0xq39J0Y4kbhTJQa0g3IQ9GZqIMmInSLzwtGDKaBR6j135zrztfTGVOm2QlWnkaidDIQ
 
 production:
   bouwplannen.heroku.com: ABQIAAAAKoNhgffhjxKh1ahkBD7mXBTtH4dxT9-942jtCR_ym7x3B1VpPRTvMdfat8fYIAbGFErHvwRIAEg-Jg
+  betaputten.heroku.com: ABQIAAAAKoNhgffhjxKh1ahkBD7mXBSy0n2r_LqlfMHMFXDtG9jLE3xD0hRRVaT6TXzj1V1YlTgeRbpGYPcYdQ
