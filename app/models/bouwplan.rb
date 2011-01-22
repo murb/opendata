@@ -1,6 +1,14 @@
 class Bouwplan < ActiveRecord::Base
   #acts_as_mappable
   include GeoKit::Geocoders
+  
+  def titel 
+    dossiernummer
+  end
+  
+  def omschrijving
+    "<p>#{self.omschrijving} in #{self.wijk} ingediend op #{self.datum_indiening}, <a href=\"#{self.tekening}\">tekening</a></p>"
+  end
       
   def self.xml
     Nokogiri::XML(File.open('data/bouwplan.xml'))

@@ -1,4 +1,4 @@
 require 'test_helper'
 
-class BouwplansHelperTest < ActionView::TestCase
+class BouwplannenHelperTest < ActionView::TestCase
 end
