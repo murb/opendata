@@ -1,38 +1,21 @@
-<p>
-  <b>Titel:</b>
-  <%=h @put.titel %>
-</p>
+<h2>Alternatief <strong><%=h @put.titel %></strong></h2>
 
 <p>
-  <b>Omschrijving:</b>
   <%=h @put.omschrijving %>
 </p>
 
-<p>
-  <b>Geinvesteerd:</b>
-  <%=h @put.geinvesteerd %>
-</p>
+<dl>
+	<dt>
+  Geïnvesteerd:
+	</dt>
+	<dd>
+  <strong>€<%=number_with_delimiter( @put.geinvesteerd, delimiter=".")%>,-</strong>
+	</dd>
+</dl>
 
+<h3>Het alternatief van <strong>Groen</strong><em>Links</em></h3>
 <p>
-  <b>Verwachte opbrengst:</b>
-  <%=h @put.verwachte_opbrengst %>
-</p>
-
-<p>
-  <b>Alternatief:</b>
   <%=h @put.alternatief %>
 </p>
 
-<p>
-  <b>Lat:</b>
-  <%=h @put.lat %>
-</p>
-
-<p>
-  <b>Lng:</b>
-  <%=h @put.lng %>
-</p>
-
-
-<%= link_to 'Edit', edit_put_path(@put) %> |
-<%= link_to 'Back', putten_path %>
+<p>Beter, nietwaar? Kies 2 maart voor <strong>Groen</strong><em>Links</em>. Klik rustig op een ander punt op de kaart om een andere bodemloze put te bekijken ga terug naar de <a href="/">thuispagina</a>, of lees meer over alle andere toekomstgerichte plannen op <a href="http://overijssel.groenlinks.nl"><strong>Groen</strong><em>Links</em> overijssel</a></p>

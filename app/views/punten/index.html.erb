@@ -1,18 +1,13 @@
-<% content_for :head do %>
-<%= GMap.header(:host=>request.host) %>
-<%= @map.to_html %>
-<% end%>
-<div id="header">
-<p>Bodemlofffzeputten.nl...</p>
-<h1>Tenzij <em>wij</em> de plannen veranderen. Kies voor de toekomst!</h1>
-<p>Op 2 maart zijn er provinciale verkiezingen. De provincie speelt een belangrijke rol in het gebruik van de ruimte, en dus kan in de provincie voorkomen worden dat er geld wordt verspilt aan grootschalige projecten zonder perspectief, noch voor de economie, noch voor ons welzijn, noch voor de natuur. En die zijn er in de overvloed. Er zit nu voor <strong>€<%=number_with_delimiter( @totaal_bedrag, delimiter=".")%>,-</strong> in de pijplijn dat we niet meer is dan geldverspilling, met een verwachte opbrengst van niet meer dan <strong>€<%=number_with_delimiter( @totaal_bedrag_verwacht, delimiter=".")%>,-</strong>. Natuurlijk kun  je vertrouwen op <strong>Groen</strong><em>Links</em> als je het tij wilt keren. Kies voor het alternatief met toekomst.</p>
+
+<div id="explanation">
+	<p>Op 2 maart zijn er provinciale verkiezingen. De provincie speelt een belangrijke rol in het gebruik van de ruimte, en dus kan in de provincie voorkomen worden dat er geld wordt verspilt aan grootschalige projecten zonder perspectief. Plannen die noch voor de economie, noch voor ons welzijn, noch voor de natuur goed zijn. Hier een overzicht van <strong><%=als_geldbedrag( @totaal_bedrag )%></strong> aan projecten. Dit geld kan volgens <strong>Groen</strong><em>Links</em> veel beter besteed worden. Lees over onze alternatieven en kies voor de toekomst.</p>	
+<p>Projecten opgenomen:	<% @punten.each do |p| %>
+	  <%= link_to p.titel,p %>
+	<% end %>
+</p>	
 </div>
 
-  <%= @map.div(:width => '50%', :height => '400px') %>
-<ul id="index">
-	<%= render @punten%>
-	</ul>
-<ul>
+<ul class="menu admin">
 	<li><%= link_to 'Nieuw bouwplan', new_bouwplan_path %></li>
 	<li><%= link_to 'Nieuwe bodemloze put', new_put_path %></li>
 </ul>

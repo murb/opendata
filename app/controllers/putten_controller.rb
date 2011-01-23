@@ -1,4 +1,5 @@
 class PuttenController < ApplicationController
+  include MapInitializer
   # GET /putten
   # GET /putten.xml
   def index
@@ -14,7 +15,9 @@ class PuttenController < ApplicationController
   # GET /putten/1.xml
   def show
     @put = Put.find(params[:id])
-
+    @punten = Put.all
+    @punten += Bouwplan.all
+    init_map
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @put }
@@ -41,6 +44,11 @@ class PuttenController < ApplicationController
   # POST /putten.xml
   def create
     @put = Put.new(params[:put])
+    
+    
+    unless (@put.lat and @put.lng) 
+      @put.geocode_address if @put.locatie
+    end
 
     respond_to do |format|
       if @put.save
@@ -80,4 +88,7 @@ class PuttenController < ApplicationController
       format.xml  { head :ok }
     end
   end
+  
+private 
+
 end

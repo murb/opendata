@@ -1,41 +1,6 @@
 
-<h1>Editing put</h1>
-
-<% form_for(@put) do |f| %>
-  <%= f.error_messages %>
-
-  <p>
-    <%= f.label :titel %><br />
-    <%= f.text_field :titel %>
-  </p>
-  <p>
-    <%= f.label :omschrijving %><br />
-    <%= f.text_area :omschrijving %>
-  </p>
-  <p>
-    <%= f.label :geinvesteerd %><br />
-    <%= f.text_field :geinvesteerd %>
-  </p>
-  <p>
-    <%= f.label :verwachte_opbrengst %><br />
-    <%= f.text_field :verwachte_opbrengst %>
-  </p>
-  <p>
-    <%= f.label :alternatief %><br />
-    <%= f.text_area :alternatief %>
-  </p>
-  <p>
-    <%= f.label :lat %><br />
-    <%= f.text_field :lat %>
-  </p>
-  <p>
-    <%= f.label :lng %><br />
-    <%= f.text_field :lng %>
-  </p>
-  <p>
-    <%= f.submit 'Update' %>
-  </p>
-<% end %>
+<h1>Bewerk de gegevens</h1>
+<%= render :partial=> 'form' %>
 
 <%= link_to 'Show', @put %> |
 <%= link_to 'Back', putten_path %>

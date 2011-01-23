@@ -3,4 +3,11 @@ class Put < ActiveRecord::Base
   
   include GeoKit::Geocoders
   
+  
+  def geocode_address
+    address = "Nederland, Overijssel, #{locatie}"
+    geo=GeoKit::Geocoders::MultiGeocoder.geocode(address)
+    errors.add(:address, "Kon de locatie helaas niet zelf plaatsen, probeer zelf de coordinaten op te geven") if !geo.success
+    self.lat, self.lng = geo.lat,geo.lng if geo.success
+  end
 end
