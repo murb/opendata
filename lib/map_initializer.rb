@@ -14,13 +14,15 @@ module MapInitializer
 
 
       @punten.each do | b |
-        gm = GMarker.new([b.lat, b.lng], :title => "#{b.titel}", :info_window => "<h3><a href=\"/putten/#{b.id}\">#{b.titel}</a></h4>".gsub!("/","\/"),:options=>{:class=>"test"})
+        gm = GMarker.new([b.lat, b.lng], :title => "#{b.titel}", 
+          :info_window => "<h3><a href=\"/putten/#{b.id}\">#{b.titel}<\\/a><\\/h4>")
 
         @map.overlay_init(gm)
+         @gmarkers << gm
         @totaal_bedrag += b.geinvesteerd if b.geinvesteerd
         @totaal_bedrag_verwacht += b.verwachte_opbrengst if b.verwachte_opbrengst
 
-        @gmarkers << gm
+       
       end
   end
 end

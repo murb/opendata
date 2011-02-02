@@ -9,5 +9,6 @@ development:
 test: ABQIAAAAzMUFFnT9uH0xq39J0Y4kbhTJQa0g3IQ9GZqIMmInSLzwtGDKaBR6j135zrztfTGVOm2QlWnkaidDIQ
 
 production:
+  bodemlozeputten.nl: ABQIAAAAKoNhgffhjxKh1ahkBD7mXBTdVemzKIeDFh_68rc3oYynOF4uSBRXVmtkEYkPhYb4OlpgI7jyNHbd4g
   betaputten.heroku.com: ABQIAAAAKoNhgffhjxKh1ahkBD7mXBSy0n2r_LqlfMHMFXDtG9jLE3xD0hRRVaT6TXzj1V1YlTgeRbpGYPcYdQ
   bouwplannen.heroku.com: ABQIAAAAKoNhgffhjxKh1ahkBD7mXBTtH4dxT9-942jtCR_ym7x3B1VpPRTvMdfat8fYIAbGFErHvwRIAEg-Jg
