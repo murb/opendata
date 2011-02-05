@@ -1,5 +1,5 @@
 class BouwplannenController < ApplicationController
-  before_filter :require_user
+  before_filter :require_admin
   
   # GET /bouwplannen
   # GET /bouwplannen.xml

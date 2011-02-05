@@ -24,10 +24,32 @@ strong {
 	font-weight: normal;
 }
 
+.inline_h3 p, .inline_h3 h3 {
+	display: inline;
+}
+
+h1, h2, h3 {
+	font-family: 'Neue Helvetica Condensed', Impact, 'Arial Black', sans-serif;
+	font-weight: normal;
+}
+
+h1 {
+}
+
+h2 {
+	margin-top: 0;
+	color: #666;
+	
+}
+
+h3 {
+	font-size: .9em;
+}
+
 #content {
 	float: left;
 	width: 48%;
-	padding: 1%;
+	padding: 0 1%;
 	min-width: 500px;
 }
 

@@ -3,6 +3,8 @@ nl:
   putten: putten
   show: toner
   index: overzicht
+  users: gebruikers
+  user_session: Sessie
   
   authlogic:
     error_messages:
@@ -25,3 +27,8 @@ nl:
         email: E-mailadres
         password: Wachtwoord
         remember_me: vergeet mij niet...
+  activerecord:
+    errors:
+      template:
+        header: Oeps!
+        body: Niet alle velden zijn goed ingevuld, controleer de invoer.
