@@ -1,0 +1,5 @@
+<h1>De pagina voor <em><%= @current_user.email.split('@')[0] %></em>@<strong><%= @current_user.email.split('@')[1]%></strong>.</h1>
+<% if @current_user.admin %>
+	<p>U bent <strong>administrator</strong>, dit betekend dat u meer kunt op deze website dan de gemiddelde ingelogde gebruiker</p>
+<% end %>
+<p>Deze pagina heeft nog geen functie...</p>

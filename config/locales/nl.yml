@@ -4,3 +4,24 @@ nl:
   show: toner
   index: overzicht
   
+  authlogic:
+    error_messages:
+      login_blank: mag niet leeg zijn
+      login_not_found: is niet gevonden
+      login_invalid: mag enkel letters, nummers en .-_@ bevatten.
+      consecutive_failed_logins_limit_exceeded: We hebben uw account geblokkeerd, omdat het inloggen te vaak verkeerd ging..
+      email_invalid: moet er ook uitzien als een e-mailadres.
+      password_blank: kan niet leeg zijn
+      password_invalid: is ongeldig
+      not_active: Uw account is nog niet actief
+      not_confirmed: U heeft uw account nog niet bevestigd
+      not_approved: Uw account is nog niet goedgekeurd
+      no_authentication_details: U dient meer informatie te geven alvorens wij u kunnen authenticeren
+    models:
+      user_session: UserSession
+    attributes:
+      user_session:
+        login: Login
+        email: E-mailadres
+        password: Wachtwoord
+        remember_me: vergeet mij niet...

@@ -1,4 +1,6 @@
 class PuttenController < ApplicationController
+  
+  before_filter :require_admin
   include MapInitializer
   # GET /putten
   # GET /putten.xml

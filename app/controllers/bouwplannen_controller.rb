@@ -1,4 +1,6 @@
 class BouwplannenController < ApplicationController
+  before_filter :require_user
+  
   # GET /bouwplannen
   # GET /bouwplannen.xml
   def index
@@ -48,6 +50,7 @@ class BouwplannenController < ApplicationController
   # GET /bouwplannen/new
   # GET /bouwplannen/new.xml
   def new
+    
     @bouwplan = Bouwplan.new
 
     respond_to do |format|
