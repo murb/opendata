@@ -85,7 +85,7 @@ h3 {
 
 #content {
 	float: left;
-	width: 37%;
+	width: 36%;
 	padding: .5%;
 	margin: 0 0 0 1%;
 	min-width: 468px;
@@ -145,6 +145,7 @@ h3 {
 	background:#7fb539;
 	color: #fff;
 	padding: .5em;
+	width: 7em;
 	
 }
 
