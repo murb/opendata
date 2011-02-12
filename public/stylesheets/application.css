@@ -152,6 +152,7 @@ h3 {
 #header p strong, #header p span {
 	float: right;
 	clear: right;
+	width: 100%;
 }
 
 #header p strong {
