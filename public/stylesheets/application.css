@@ -2,7 +2,7 @@ body, html {
 	margin: 0;
 	padding:0;
 	font-family: georgia, Times, 'Times New Roman', Serif;
-	
+	background: #f0f0f0;
 }
 
 h1 {
@@ -12,7 +12,12 @@ h1 {
 
 h3 {
 	margin: 0;
+	color: #333;
 }
+
+h3 a {
+	text-decoration: none;
+	}
 
 em {
 	color: #7fb539;
@@ -33,6 +38,15 @@ h1, h2, h3 {
 	font-weight: normal;
 }
 
+a {
+	color: #f00;
+}
+
+a:visited {
+	color: #a55;
+}
+
+
 h1 {
 }
 
@@ -46,11 +60,37 @@ h3 {
 	font-size: .9em;
 }
 
+.menu {
+	float: right;
+	margin:0;
+	padding: 0;
+	list-style:none;
+}
+
+.menu li {
+	float: right;
+	text-decoration: none;
+	margin: .5em 0 .5em 1em;
+}
+
+.menu a {
+	float: right;
+	text-decoration: none;
+	font-size: 1.2em;
+	color: #fff;
+	background: #f00;
+	padding: .2em .5em;
+}
+
 #content {
 	float: left;
-	width: 48%;
-	padding: 0 1%;
-	min-width: 500px;
+	width: 38%;
+	padding: .5%;
+	margin: 0 0 0 1%;
+	min-width: 480px;
+	background: #fff;
+	min-height: 462px;
+	
 }
 
 #index, #explanation {
@@ -69,5 +109,53 @@ h3 {
 }
 #map_div {
 	min-width: 500px;
+	height: 450px;
 	float: left;
+	margin: 12px 0;
+}
+
+#header, #footer {
+	width: 79%;
+	padding: .5%;
+	float: left;
+	margin: 0 0 0 10%;
+	clear: both;
+	background: #fff;
+}
+
+#header {
+}
+
+#header h1 {
+	float: left;
+	margin:0;
+	font-size: 2.5em;
+}
+
+#header h1 a {
+	text-decoration: none;
+	color: black;
+}
+
+#header p {
+	float: right;
+	text-align: right;
+	margin:-1em -1em 0em 1em;
+	background:#7fb539;
+	color: #fff;
+	padding: .5em;
+	
+}
+
+#header p strong, #header p span {
+	float: right;
+	clear: right;
+}
+
+#header p strong {
+	font-size: 1.2em;
+}
+#footer {
+	font-size: .8em;
+	color: #aaa;
 }

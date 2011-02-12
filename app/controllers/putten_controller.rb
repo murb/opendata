@@ -20,6 +20,7 @@ class PuttenController < ApplicationController
     @punten = Put.all
     @punten += Bouwplan.all
     init_map
+    @map.center_zoom_init([@put.lat,@put.lng],15)
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @put }

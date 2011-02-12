@@ -15,8 +15,11 @@ module MapInitializer
 
 
       @punten.each do | b |
+        
+        @map.icon_global_init( GIcon.new( :image => "/images/put.png", :icon_size => GSize.new( 32,32 ), :icon_anchor => GPoint.new(12,32), :info_window_anchor => GPoint.new(9,2) ), "put")
+        put_icon = Variable.new("put"); 
         gm = GMarker.new([b.lat, b.lng], :title => "#{b.titel}", 
-          :info_window => "<h3><a href=\"/putten/#{b.id}\">#{b.titel}<\\/a><\\/h4>")
+          :info_window => "<h3><a href=\"/putten/#{b.id}\">#{b.titel}<\\/a><\\/h3><p>In #{b.plaatsnaam} is al #{b.geinvesteerd} in een put gestopt.<\\/p>",:icon=>put_icon)
 
         @map.overlay_init(gm)
          @gmarkers << gm
