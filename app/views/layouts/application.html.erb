@@ -14,9 +14,11 @@
 	
 	<%= GMap.header(:host=>request.host) %>
 	<script type="text/javascript">
-		<%= @map.to_html(:no_script_tag=>true) %>
+		<%= @map.to_html(:no_script_tag=>true)
+		
+		 %>
 		window.onload = addCodeToFunction(window.onload,function() {
-		overijssel(map);
+			overijssel(map);
 		});
 	</script>
 	<% end %>
@@ -33,8 +35,8 @@
 		</ul>
 		<p>Alleen hier staan al meer dan <strong><%= als_geldbedrag @totaal_bedrag%></strong> aan bodemloze putten! Tenzij <em>wij</em> de plannen veranderen wordt dit meer. <strong>Kies voor de toekomst!</strong></p>
 	</div>
-<p style="color: green"><%= notice %></p>
-	  <%= @map.div(:width => '50%', :height => '400px') if @map%>
+<p style="color: green"><%= notice %></p>sdf
+<%= @map.div(:width => '50%',:height => '450px') %>
 		<div id="content">
 		
 

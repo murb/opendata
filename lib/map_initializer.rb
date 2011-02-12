@@ -2,8 +2,9 @@ module MapInitializer
   def init_map
      @bouwplannen = Bouwplan.all
       @map = GMap.new("map_div")
-      @map.control_init(:large_map => true,:map_type => true)
-      @map.center_zoom_init([52.40,6.40],9)
+
+      @map.control_init(:large_map => true,:map_type => false)
+      @map.center_zoom_init([52.45,6.40],9)
 
       @gmarkers = []
 

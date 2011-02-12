@@ -2,8 +2,5 @@
 <html><head><title>Test</title>
   <%= GMap.header %>
   <%= @map.to_html %>
-  </head><body>
   <%= @map.div(:width => '50%', :height => '600px') %>
-  </body></html>
-
-<%= link_to 'New bouwplan', new_bouwplan_path %>
+<%= link_to('New bouwplan', new_bouwplan_path)  %>

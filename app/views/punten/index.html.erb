@@ -6,7 +6,8 @@
 	<% end %>
 </p>	
 </div>
-
+<% if current_user_is_admin? %>
 <ul class="menu admin">
 	<li><%= link_to 'Nieuwe bodemloze put', new_put_path %></li>
 </ul>
+<% end %>
