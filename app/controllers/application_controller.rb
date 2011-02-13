@@ -63,8 +63,8 @@ private
 
   def ensure_domain
     
-    if request.env['HTTP_HOST'] != TheDomain
-      redirect_to TheDomain, :status => 301 unless Rails.env == "development"
+    if request.env['HTTP_HOST'].include?("www.")
+      redirect_to TheDomain, :status => 301
     end
   end
 end
