@@ -1,4 +1,5 @@
 class PuttenController < ApplicationController
+  before_filter :redirect_permanent_on_mistyped_url, :only => :show
   
   before_filter :require_admin, :except=>[:show, :index]
   include MapInitializer
@@ -96,5 +97,9 @@ private
       @put.geocode_address if @put.locatie
       @put.save
     end
+  end
+  def redirect_permanent_on_mistyped_url
+    article = Put.find(params[:id])
+    redirect_to article, :status => 301 unless article.to_param == params[:id]   
   end
 end

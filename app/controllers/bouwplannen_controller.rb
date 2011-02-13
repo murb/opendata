@@ -1,5 +1,7 @@
 class BouwplannenController < ApplicationController
   before_filter :require_admin
+  before_filter :redirect_permanent_on_mistyped_url, :only => :show
+  
   
   # GET /bouwplannen
   # GET /bouwplannen.xml
@@ -106,5 +108,9 @@ class BouwplannenController < ApplicationController
       format.html { redirect_to(bouwplannen_url) }
       format.xml  { head :ok }
     end
+  end
+  def redirect_permanent_on_mistyped_url
+    article = Bouwplan.find(params[:id])
+    redirect_to article, :status => 301 unless article.to_param == params[:id]   
   end
 end

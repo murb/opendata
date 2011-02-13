@@ -40,4 +40,9 @@ class Bouwplan < ActiveRecord::Base
     self.lat, self.lng = geo.lat,geo.lng if geo.success
     self.save!
   end
+  
+  def to_param
+    "#{id}-#{omschrijving.downcase.gsub(/[^[:alnum:]]/,'-')}".gsub(/-{2,}/,'-')
+  end
+  
 end
