@@ -1,0 +1,10 @@
+<h2>Contact</h2>
+<p>Weet u zelf nog een bodemloze put, of denkt u dat bepaalde getallen niet kloppen? Laat het ons dan weten. We zullen zo spoedig mogelijk contact met u opnemen.</p>
+
+<% semantic_form_for(@contact_mail) do |f| %>
+
+  <%= f.inputs %>
+  <% f.buttons do %>
+      <%= f.commit_button :create %>  
+    <% end %>
+<% end %>

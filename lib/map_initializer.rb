@@ -8,8 +8,6 @@ module MapInitializer
 
       @gmarkers = []
 
-    
-
       @totaal_bedrag = 0
       @totaal_bedrag_verwacht = 0
 

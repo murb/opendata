@@ -2,11 +2,16 @@ nl:
   punten: punten
   putten: putten
   show: toner
-  new: nieuw
+  new: maker
   index: overzicht
   users: gebruikers
   user_session: Sessie
-  
+  contact_mails: Contact 
+  formtastic:
+    actions:
+      create: "Versturen"
+      update: "Opslaan"
+      
   authlogic:
     error_messages:
       login_blank: mag niet leeg zijn
@@ -33,3 +38,13 @@ nl:
       template:
         header: Oeps!
         body: Niet alle velden zijn goed ingevuld, controleer de invoer.
+      models:
+        contact_mail:
+          attributes:
+            naam:
+              blank: De naam is niet ingevuld
+            bericht:
+              blank: U heeft geen bericht ingevuld
+            email:
+              blank: U heeft geen e-mailadres ingevoerd
+              invalid: U heeft geen geldig e-mailadres ingevoerd 

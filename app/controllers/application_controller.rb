@@ -6,14 +6,15 @@ class ApplicationController < ActionController::Base
   filter_parameter_logging :password, :password_confirmation
   helper_method :current_user_session, :current_user
   protect_from_forgery # See ActionController::RequestForgeryProtection for details
+  before_filter :ensure_domain
 
+  TheDomain = 'http://bodemlozeputten.nl'
 
   # Scrub sensitive parameters from your log
   # filter_parameter_logging :password
-  
-
 
 private
+
   def current_user_session
     return @current_user_session if defined?(@current_user_session)
     @current_user_session = UserSession.find
@@ -60,4 +61,10 @@ private
     end
   end
 
+  def ensure_domain
+    
+    if request.env['HTTP_HOST'] != TheDomain
+      redirect_to TheDomain, :status => 301 unless Rails.env == "development"
+    end
+  end
 end

@@ -45,5 +45,18 @@ Rails::Initializer.run do |config|
   # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}')]
   # 
   
+  
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = { 
+    :enable_starttls_auto => true,
+    :tls => true,
+    :address => "smtp.gmail.com", 
+    :port => 587, 
+    :domain => "gmail.com", 
+    :authentication => :login, 
+    :user_name => "ramshacklemurb", 
+    :password => "dnocRMDd" 
+  }
+  config.action_mailer.perform_deliveries = true 
   config.i18n.default_locale = :nl
 end

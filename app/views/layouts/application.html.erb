@@ -35,16 +35,19 @@
 	<div id="header">
 
 		<h1><a href="/"><strong>Bodemlozeputten</strong> in <em>Overijssel</em></a></h1>
+		<% if @totaal_bedrag%>
 		<p><span>Meer dan</span> <strong><%= als_geldbedrag @totaal_bedrag%></strong> <span>in putten</span></p>
+		<% end%>
 		
 		<ul class="menu">
 			<li><a href="/">Home</a></li>
-			<li><a href="/">Contact</a></li>
+			<li><a href="/contact">Contact</a></li>
 		</ul>
 	</div>
-	<p style="color: green"><%= notice %></p>
 	<%= @map.div(:width => '50%',:height => '450px') if @map %>
 	<div id="content">
+		<%if notice %><p style="color: green"><%= notice %></p><% end %>
+		
 		<%= yield %>
 	</div>
 	<div id="footer">
