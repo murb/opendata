@@ -1,9 +1,12 @@
 
 <div id="explanation">
-	<p>Op 2 maart zijn er provinciale verkiezingen. De provincie speelt een belangrijke rol in het gebruik van de ruimte, en dus kan in de provincie voorkomen worden dat er geld wordt verspilt aan grootschalige projecten zonder perspectief. Plannen die noch voor de economie, noch voor ons welzijn, noch voor de natuur goed zijn. Hier een overzicht van <strong><%=als_geldbedrag( @totaal_bedrag )%></strong> aan projecten. Dit geld kan volgens <strong>Groen</strong><em>Links</em> veel beter besteed worden. Lees over onze alternatieven en kies voor de toekomst.</p>	
-<p>Projecten opgenomen:	<% @punten.each do |p| %>
-	  <%= link_to p.titel,p %>
-	<% end %>
+	<p>Bestuurders zien zichzelf graag als daadkrachtig en visionair. Dat daar wel eens plannen en projecten uitrollen waarvan nut en noodzaak twijfelachtig zijn, is misschien begrijpelijk. Maar dat die plannen en projecten desondanks doorgezet worden en heel vaak uitmonden in zinloze verspilling van openbare middelen en het verwoesten van natuur en landschap, is iets waar we geen begrip voor hebben. Dat is geld in een ‘bodemloze put’ gooien.</p>
+
+	<p>Met deze site willen we deze putten in kaart brengen, zodat voor alle burgers duidelijk is waar en hoeveel er wordt verspilt aan geld– en natuurwaarden-verspillende projecten.</p>
+
+	<p>Op dit moment hebben we al een lijst van projecten waar in totaal al meer dan <strong><%=als_geldbedrag( @totaal_bedrag )%></strong> is ingegooid. Neem <a href="/contact">contact met ons</a> wanneer u uw eigen kennis en tips kwijt wilt. En aarzel vooral niet om daar ook uw aanvullingen en/of verbeteringen door te geven.</p>
+	
+<p>Projecten opgenomen:	<%=opsomming @punten%></p>
 </p>	
 </div>
 <% if current_user_is_admin? %>

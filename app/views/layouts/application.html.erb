@@ -37,12 +37,12 @@
 		</ul>
 	</div>
 	<p style="color: green"><%= notice %></p>
-	<%= @map.div(:width => '50%',:height => '450px') %>
+	<%= @map.div(:width => '50%',:height => '450px') if @map %>
 	<div id="content">
 		<%= yield %>
 	</div>
 	<div id="footer">
-		<p>'Bodemlozeputten.nl' is een initiatief van <a href="http://groenlinks.nl"><strong>Groen</strong><em>Links</em></a> afdeling <a href="http://groenlinksenschede.nl/">Enschede-Haaksbergen</a>. Voor alle informatie geldt dat deze baseert op openbare bronnen en eerlijk rekenwerk. Mochten er op- en/of aanmerkingen zijn, <a href="mailto:info@bodemlozeputten.nl">geef deze dan door</a>.</p>
+		<p>'Bodemlozeputten.nl' is een initiatief van <a href="http://groenlinks.nl"><strong>Groen</strong><em>Links</em></a> afdeling <a href="http://groenlinksenschede.nl/">Enschede-Haaksbergen</a>. Voor alle informatie geldt dat deze baseert op openbare bronnen en eerlijk rekenwerk. Mochten er op- en/of aanmerkingen zijn, <a href="mailto:info@bodemlozeputten.nl">geef deze dan door</a>. <small style="float:right;margin-top:.5em">Realisatie: <a href="http://murb.nl">murb.nl</a> en <a href="http://www.bertvanderveen.nl/">bv[o]</small></p>
 	</div>
 </body>
 </html>

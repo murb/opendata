@@ -1,33 +1,24 @@
 <h2><strong><%=h @put.titel %></strong><br/><%=h @put.plaatsnaam %></h2>
 <div class="inline_h3">
 <h3>Wat?</h3>
-<p>
-  <%=h @put.omschrijving %>
-</p>
+  <%=markdown @put.omschrijving %>
 </div>
 <div class="inline_h3">
 <h3>Hoeveel?</h3>
-<p>De totale investering wordt geraamd op <strong><%=@put.minimum_verwachte_investering%> – <%=@put.maximum_verwachte_investering%></strong>. <%=h @put.plaatsnaam %> heeft al circa  <strong>€<%=number_with_delimiter( @put.geinvesteerd, delimiter=".")%>,-</strong> miljoen euro uitgegeven aan studies, planvorming en onderhoud.
-</p>
+	<%=markdown @put.hoeveel %>
 </div>
 
 <div class="inline_h3">
 	<h3>Wordt het wat?</h3>
-<p>
-  <%=h @put.wordt_het_wat %>
-</p>
+  <%=markdown @put.wordt_het_wat %>
 </div>
 <div class="inline_h3">
 	<h3>Wie?</h3>
-<p>
-  <%=h @put.verantwoordelijken %>
-</p>
+  <%=markdown @put.verantwoordelijken %>
 </div>
 <div class="inline_h3">
 	<h3>En het <strong>Groen</strong><em>Links</em> alternatief?</h3>
-<p>
-  <%=h @put.alternatief %>
-</p>
+  <%=markdown @put.alternatief %>
 </div>
 
-<p>Beter, nietwaar? Kies 2 maart voor <strong>Groen</strong><em>Links</em>. Klik rustig op een ander punt op de kaart om een andere bodemloze put te bekijken ga terug naar de <a href="/">thuispagina</a>, of lees meer over alle andere toekomstgerichte plannen op <a href="http://overijssel.groenlinks.nl"><strong>Groen</strong><em>Links</em> overijssel</a></p>
+<p>Beter, nietwaar? Kies 2 maart voor <strong>Groen</strong><em>Links</em>. En dat is nog niet alles! Ga naar het <a href="/">overzicht van projecten</a>, of lees meer over alle andere toekomstgerichte plannen op <a href="http://overijssel.groenlinks.nl"><strong>Groen</strong><em>Links</em> overijssel</a></p>

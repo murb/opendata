@@ -20,7 +20,7 @@ class PuttenController < ApplicationController
     @punten = Put.all
     @punten += Bouwplan.all
     init_map
-    @map.center_zoom_init([@put.lat,@put.lng],15)
+    @map.center_zoom_init([@put.lat,@put.lng],14)
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @put }
@@ -47,14 +47,11 @@ class PuttenController < ApplicationController
   # POST /putten.xml
   def create
     @put = Put.new(params[:put])
-    
-    
-    unless (@put.lat and @put.lng) 
-      @put.geocode_address if @put.locatie
-    end
 
+    
     respond_to do |format|
       if @put.save
+        geolocate
         format.html { redirect_to(@put, :notice => 'Put was successfully created.') }
         format.xml  { render :xml => @put, :status => :created, :location => @put }
       else
@@ -68,9 +65,10 @@ class PuttenController < ApplicationController
   # PUT /putten/1.xml
   def update
     @put = Put.find(params[:id])
-
+    
     respond_to do |format|
       if @put.update_attributes(params[:put])
+        geolocate
         format.html { redirect_to(@put, :notice => 'Put was successfully updated.') }
         format.xml  { head :ok }
       else
@@ -93,5 +91,10 @@ class PuttenController < ApplicationController
   end
   
 private 
-
+ def geolocate 
+    unless (@put.lat and @put.lng) 
+      @put.geocode_address if @put.locatie
+      @put.save
+    end
+  end
 end
