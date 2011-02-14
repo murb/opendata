@@ -5,6 +5,7 @@
 <meta name="Description" content="<%= @put.omschrijving %>" />
 <% end %>
 <h2><strong><%=h @put.titel %></strong><br/><%=h @put.plaatsnaam %></h2>
+<%= "<p>#{link_to 'Bewerk deze bodemloze put', edit_put_path(@put)}</p>" if current_user_is_admin? %>
 <div class="inline_h3">
 <h3>Wat?</h3>
   <%=markdown @put.omschrijving %>
