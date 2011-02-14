@@ -83,10 +83,10 @@ a:visited {
 }
 
 #content {
-	float: left;
+	float: right;
 	width: 36%;
 	padding: .5%;
-	margin: 0 0 0 1%;
+	margin: 0 11% 0 0;
 	min-width: 468px;
 	background: #fff;
 	min-height: 462px;

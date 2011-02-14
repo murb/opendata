@@ -6,6 +6,8 @@
 <% end %>
 <h2><strong><%=h @put.titel %></strong><br/><%=h @put.plaatsnaam %></h2>
 <%= "<p>#{link_to 'Bewerk deze bodemloze put', edit_put_path(@put)}</p>" if current_user_is_admin? %>
+<p> <a href="http://twitter.com/home?status=Weer%20een%20bodemloze%20put%21%20http%3A%2F%2Fbodemlozeputten.nl/putten%2f<%=@put.to_param%>"><img src="/images/twitter.png" alt="Deel via Twitter" title="Deel via Twitter" height="18" width="15"></a> <a href="http://www.hyves-share.nl/button/tip/?tipcategoryid=12&amp;rating=5&amp;title=Weer%20een%20bodemloze%20put%21&amp;body=http%3A%2F%2Fbodemlozeputten.nl/putten%2f<%=@put.to_param%>"><img src="/images/hyves.png" alt="Deel op Hyves" title="Deel op Hyves" height="18" width="18"></a> <a href="http://www.facebook.com/sharer.php?u=http%3A%2F%2Fbodemlozeputten.nl/putten%2f<%=@put.to_param%>&amp;t=Weer%20een%20bodemloze%20put%21"><img src="/images/facebook.png" alt="Deel op Facebook" title="Deel op Facebook" height="18" width="17"></a>
+	</p>
 <div class="inline_h3">
 <h3>Wat?</h3>
   <%=markdown @put.omschrijving %>
@@ -28,4 +30,4 @@
   <%=markdown @put.alternatief %>
 </div>
 
-<p>Beter, nietwaar? Kies 2 maart voor <strong>Groen</strong><em>Links</em>. En dat is nog niet alles! Ga naar het <a href="/">overzicht van projecten</a>, of lees meer over alle andere toekomstgerichte plannen op <a href="http://overijssel.groenlinks.nl"><strong>Groen</strong><em>Links</em> overijssel</a></p>
+<p>Kies 2 maart voor <strong>Groen</strong><em>Links</em>. Want dat is de partij met de beste toekomstgerichte plannen. Bekijk ze op onze website <a href="http://overijssel.groenlinks.nl"><strong>Groen</strong><em>Links</em> overijssel</a>.</p>
